@@ -1,0 +1,133 @@
+:root {
+    /*Primary*/
+    --dark-violet: hsl(256, 26%, 20%);
+    --grayish-blue: hsl(216, 30%, 68%);
+    /*Neutral*/
+    --very-dark-voilet: hsl(270, 9%, 17%);
+    --dark-grayish-violet: hsl(273, 4%, 51%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+html {
+    /* color-scheme: dark light; */
+}
+
+body {
+    display: grid;
+    height: 100svh;
+    width: 100svw;
+    margin: 0;
+    container: body / inline-size;
+}
+
+main {
+    display: grid;
+    height: 100cqh;
+    width: 100cqw;
+}
+
+header {
+    display: grid;
+    place-items: center;
+    height: 150px;
+    width: 100%;
+}
+section[class="intro-card-text"] {
+    display: grid;
+    gap: 30px;
+    align-content: baseline;
+}
+span{
+    border: 0;
+    border-bottom: 1px solid var(--very-light-gray);
+    width: 25%;   
+}
+h1{
+    font-size:3.5em ;
+    width: 70%;
+    margin: 0   ;
+}
+section[class="intro-card"] {
+    display: grid;
+    position: relative;
+    height: 500px;
+    background-color: var(--dark-violet);
+    box-sizing: border-box;
+    padding:5% 10%;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    color: var(--very-light-gray);
+}
+img[class="bg-pattern-intro-right-desktop"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 90%;
+}
+img[class="bg-pattern-intro-left-desktop"] {
+    position: absolute;
+    top: 330px;
+}
+img[class="bg-pattern-intro-right-mobile"],
+img[class="bg-pattern-intro-left-mobile"] {
+    display: none;
+}
+button {
+    color: var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+    width: 150px;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: transparent;
+    justify-self: start;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover     {
+    background-color: var(--very-light-gray);
+   color: var(--dark-violet);
+}
+
+@container(inline-size < 1100px) {
+    section[class="intro-card"] {
+        grid-template-columns: 1fr ;
+        padding: 0;
+        height: 100%;
+    }
+    h1{
+        width: 100%;
+        font-size: 3em;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+    picture img{
+        width: 100%;
+        order:1;
+    }
+section[class="intro-card-text"] {
+    order: 2;
+}
+button{
+    justify-self: center;
+    margin-bottom: 50px;
+}
+img[class="bg-pattern-intro-right-mobile"] {
+    display: grid;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 90%;
+}
+img[class="bg-pattern-intro-left-mobile"] {
+    display: grid;  
+    position: absolute;
+    top: 330px;
+}
+img[class="bg-pattern-intro-right-desktop"],
+img[class="bg-pattern-intro-left-desktop"] {
+    display: none;
+}
+}
