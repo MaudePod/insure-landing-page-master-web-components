@@ -16,7 +16,7 @@
 body {
     display: grid;
     height: 100svh;
-    max-width: 100svw;
+    width: 100svw;
     margin: 0;
     container: body / inline-size;
     font-family: 'DM_Serif_Display';
